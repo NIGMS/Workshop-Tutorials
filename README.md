@@ -1,7 +1,10 @@
 # Interactive Quizzes in Jupyter Notebooks
 ---------------------------------
 ### Workshop Objective:
-The objective of this workshop is to provide you with a basic understanding and resources to build interactive test materials into your modules.
+The objective of this workshop is to provide you with a basic understanding and the resources to build interactive test materials into your modules.
+
+### Before Getting Started:
+Make sure to add the Workshop-Tutorial repository to your instance upon creation or clone the repository after creation.
 
 ### Workshop Outline: 
 The tutorial is broken into the following **five** sections:

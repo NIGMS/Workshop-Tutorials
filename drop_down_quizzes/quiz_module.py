@@ -4,6 +4,7 @@ import json
 import ipywidgets as widgets
 from IPython.display import display
 import random
+import urllib.request
 
 class MatchingQuiz:
     def __init__(self, import_type:str, import_path:str, instant_feedback=False, shuffle_questions=False, shuffle_answers=False):
@@ -25,9 +26,13 @@ class MatchingQuiz:
                 data = json.load(f)
         
         elif import_type == 'url':
-            res = requests.get(import_path)
-            data = res.json()
-        
+            print("fetching data from URL")
+            try:
+                with urllib.request.urlopen(import_path) as response:
+                    res = response.read().decode('utf-8')
+                data = json.loads(res)
+            except:
+                print("Something went wrong.")
         else:
             print("Invalid parameter value, import_type must be a str value equal to 'json' or 'url'.")
             
