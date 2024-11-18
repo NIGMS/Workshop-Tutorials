@@ -26,7 +26,6 @@ class MatchingQuiz:
                 data = json.load(f)
         
         elif import_type == 'url':
-            print("fetching data from URL")
             try:
                 with urllib.request.urlopen(import_path) as response:
                     res = response.read().decode('utf-8')
